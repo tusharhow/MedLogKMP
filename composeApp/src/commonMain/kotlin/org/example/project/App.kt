@@ -3,16 +3,14 @@ package org.example.project
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.transitions.SlideTransition
-import org.example.project.auth.LoginScreen
+import org.example.project.views.splash.Splash
 
 @Composable
-@Preview
 fun App() {
     MaterialTheme {
-      Navigator(LoginScreen()){navigator: Navigator ->
+      Navigator(Splash()) {navigator: Navigator ->
           SlideTransition(navigator = navigator)
       }
     }
